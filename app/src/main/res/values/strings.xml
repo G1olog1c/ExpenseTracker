@@ -7,4 +7,6 @@
     <string name="total">Total</string>
     <string name="expense_added">Expense added</string>
     <string name="invalid_input">Invalid data</string>
+    <string name="database_cleared">Database cleared</string>
+    <string name="clear_database">Clear history</string>
 </resources>

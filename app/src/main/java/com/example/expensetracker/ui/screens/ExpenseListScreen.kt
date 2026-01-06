@@ -1,6 +1,7 @@
 package com.example.expensetracker.ui.screens
 
-import android.R
+import android.widget.Toast
+import com.example.expensetracker.R
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -16,8 +17,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavController
 import com.example.expensetracker.data.AppDatabase
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 @Composable
 fun ExpenseListScreen(
@@ -34,7 +40,7 @@ fun ExpenseListScreen(
         modifier = Modifier.padding(16.dp)
     ){
         Text(
-            text = stringResource(R.string.total) + ": $total"
+            text = stringResource(R.string.total) + ": $total",
             fontSize = 20.sp
         )
 
@@ -57,6 +63,27 @@ fun ExpenseListScreen(
             modifier = Modifier.fillMaxWidth()
         ) {
             Text(stringResource(R.string.add_expense))
+        }
+
+        Spacer(Modifier.height(120.dp))
+
+        val context = LocalContext.current
+
+        Button(
+            onClick = {
+                CoroutineScope(Dispatchers.IO).launch {
+                    database.expenseDao().deleteAll()
+                }
+
+                Toast.makeText(
+                    context,
+                    context.getString(R.string.database_cleared),
+                    Toast.LENGTH_SHORT
+                ).show()
+            },
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text(stringResource(R.string.clear_database))
         }
     }
 }

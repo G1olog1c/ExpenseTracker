@@ -5,7 +5,9 @@
     <string name="save">Zapisz</string>
     <string name="title">Tytuł</string>
     <string name="amount">Kwota</string>
-    <string name="total">Razem</string>
+    <string name="total">Bilans</string>
     <string name="expense_added">Dodano wydatek</string>
     <string name="invalid_input">Nieprawidłowe dane</string>
+    <string name="database_cleared">Historię wyczyszczono</string>
+    <string name="clear_database">Wyczyść historię</string>
 </resources>
