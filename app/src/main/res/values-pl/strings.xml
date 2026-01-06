@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ExpenseTracker</string>
+    <string name="add_expense">"Dodaj wydatek "</string>
+    <string name="save">Zapisz</string>
+    <string name="title">Tytuł</string>
+    <string name="amount">Kwota</string>
+    <string name="total">Razem</string>
+    <string name="expense_added">Dodano wydatek</string>
+    <string name="invalid_input">Nieprawidłowe dane</string>
+</resources>

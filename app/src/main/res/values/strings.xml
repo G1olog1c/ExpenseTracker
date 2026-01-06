@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ExpenseTracker</string>
+    <string name="add_expense">Add expense</string>
+    <string name="save">Save</string>
+    <string name="title">Title</string>
+    <string name="amount">Amount</string>
+    <string name="total">Total</string>
+    <string name="expense_added">Expense added</string>
+    <string name="invalid_input">Invalid data</string>
+</resources>
