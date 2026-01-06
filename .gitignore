@@ -1,15 +1,32 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+# ===== Android / Gradle =====
+*.apk
+*.aab
+*.dex
+*.class
+
+bin/
+gen/
+out/
+build/
+
+.gradle/
 local.properties
+
+# ===== Android Studio =====
+.idea/
+*.iml
+*.log
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== Kotlin =====
+.kotlin/
+
+# ===== External Native Build =====
+.externalNativeBuild/
+.cxx/
+
+# ===== Secrets =====
+google-services.json
